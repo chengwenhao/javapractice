@@ -162,6 +162,7 @@ public class NewStream {
 class User{
     public int age;
     public String name;
+    public String sex;
 
     public User(int age,String name){
         this.age = age;
@@ -183,4 +184,6 @@ class User{
     public void setName(String name) {
         this.name = name;
     }
+
+
 }
