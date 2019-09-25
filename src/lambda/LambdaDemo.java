@@ -1,6 +1,5 @@
 package lambda;
 
-import javax.lang.model.type.ArrayType;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
