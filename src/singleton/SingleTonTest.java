@@ -181,7 +181,7 @@ class SingleTonSeven{
 		答：只要在Singleton类中定义readResolve就可以解决该问题。
 		如下：
  */
-public class SingletonEight implements Serializable {
+class SingletonEight implements Serializable {
 	private volatile static SingletonEight singleton;
 	private SingletonEight (){}
 	public static SingletonEight getSingleton() {
