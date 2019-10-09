@@ -7,6 +7,5 @@ public class Demo {
         boolean b = s.startsWith("J");
         System.out.println(b);
     }
-    //https://github.com/lenve/vhr
 
 }
