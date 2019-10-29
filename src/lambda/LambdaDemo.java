@@ -13,6 +13,11 @@ import java.util.stream.Collectors;
 public class LambdaDemo {
     public static void main(String[] args) {
 
+        /*Lambda 的访问范围
+        相比于匿名实现的对象，lambda 表达式访问外部变量非常简单。
+        lambda 表达式可以访问本地外部的 final 变量、成员变量和静态变量。
+        然而 如果本地变量不加final修饰符，在编译的过程中会被隐式的编译成final*/
+
         //1.代替匿名类，比如:
         new Thread(() -> System.out.println("1232323")).start();
 
