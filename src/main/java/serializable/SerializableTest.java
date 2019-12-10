@@ -1,7 +1,11 @@
 package serializable;
 
-public class SerializableTest {
-    
+import java.io.Serializable;
 
+public class SerializableTest implements Serializable{
+
+    public static void main(String[] args) {
+        
+    }
 
 }
