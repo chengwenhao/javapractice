@@ -1,18 +1,32 @@
 package serializable;
 
-import java.io.Serializable;
+import java.io.*;
 
 public class SerializableTest{
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        //1.将对象序列化到文件中
+        User user = new User();
+        user.setAge("10");
+        user.setSex("1");
+        user.setUserName("abc");
+        user.setUserNo("10000000");
+        File file = new File("E:\\IdeaProjects\\javapracticeFile\\serializabletest\\serializabletest.txt");
+        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file));
+        out.writeObject(user);
 
+        //2.将文件中的字节数据反序列化到对象
+        File inFile = new File("E:\\IdeaProjects\\javapracticeFile\\serializabletest\\serializabletest.txt");
+        ObjectInputStream in = new ObjectInputStream(new FileInputStream(inFile));
+        User inUser = (User)in.readObject();
+        System.out.println(inUser.toString());
     }
 
 }
 
 class User implements Serializable{
 
-    private static long serialVersionUID = 1L;
+    private final static long serialVersionUID = 1L;
 
     private String userName;
     private String userNo;
@@ -49,5 +63,15 @@ class User implements Serializable{
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", userNo='" + userNo + '\'' +
+                ", age='" + age + '\'' +
+                ", sex='" + sex + '\'' +
+                '}';
     }
 }
