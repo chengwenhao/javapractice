@@ -1,3 +1,3 @@
 # javapractice
 java练习
-想到哪写到哪
+练习java
