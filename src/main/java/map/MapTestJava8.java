@@ -3,7 +3,7 @@ package map;
 import java.util.*;
 
 /**
- * java8 map 新增方法练习
+ * java8 map 新增方法练习test
  */
 public class MapTestJava8 {
 
