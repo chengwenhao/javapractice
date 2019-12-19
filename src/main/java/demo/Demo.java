@@ -50,6 +50,10 @@ public class Demo {
         }
 
 
+        List<Map<String,Object>> configs = new ArrayList<>();
+        Map<String, List<String>> collect = configs.stream().collect(Collectors.groupingBy(x -> x.get("EXPENSETYPENO").toString(), Collectors.mapping(x -> x.get("NOTETYPENO").toString(), Collectors.toList())));
+
+
     }
 
 }
