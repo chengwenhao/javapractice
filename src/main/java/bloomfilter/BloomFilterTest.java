@@ -15,7 +15,7 @@ public class BloomFilterTest {
 
     public static void main(String[] args) {
         int max_size = 1000000;
-
+//        https://juejin.im/post/5c5251b1518825469414ef4a
         BloomFilter<CharSequence> bloomFilter = BloomFilter.create(Funnels.stringFunnel(Charsets.UTF_8), 1000000L, 0.00003);
 
         for (int i=0;i<max_size;i++){
