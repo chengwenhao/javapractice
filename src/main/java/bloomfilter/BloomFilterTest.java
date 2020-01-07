@@ -37,6 +37,7 @@ public class BloomFilterTest {
         }
         System.out.println(list);
         System.out.println("有误伤的数量：" + list.size());
+        System.out.println("有误伤的数量：" + list.size());
     }
 
 }
